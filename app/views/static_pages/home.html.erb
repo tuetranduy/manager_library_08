@@ -1,4 +1,16 @@
 <% provide(:title, t(".home")) %>
-<div>
-  <h1><%= t ".home" %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <p class="lead"><%= t ".home" %></p>
+      <div class="list-group">
+        <%= render partial: "category", collection: @categories %>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row carousel-holder">
+      </div>
+      <%= render "static_pages/book_index" %>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,18 @@
+<% provide(:title, @book.name) %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <img alt="Img" src="" class="img-rounded" />
+    </div>
+    <div class="col-md-8">
+      <ul class = "book-show">
+        <li> <%= @book.name %> </li>
+        <li> <%= @book.author.name %> </li>
+        <li> <%= @book.publisher.name %> </li>
+        <li> <%= @book.category.name %> </li>
+        <li> <%= @book.details %> </li>
+        <li> <%= @book.rating %> </li>
+      </ul>
+    </div>
+  </div>
+</div>

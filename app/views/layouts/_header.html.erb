@@ -37,11 +37,10 @@
             <li><%= link_to t("form.logout"), logout_path, method: :delete %></li>
           </ul>
         <% else %>
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-left">
             <li><%= link_to t("form.log_in"), login_path %></li>
           </ul>
         <% end %>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>

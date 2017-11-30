@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20171206035912) do
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
     t.index ["author_id"], name: "index_books_on_author_id"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["name"], name: "index_books_on_name", unique: true
@@ -106,6 +107,13 @@ ActiveRecord::Schema.define(version: 20171206035912) do
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_ratings_on_book_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
+  end
+
+  create_table "user_follow_relation_ships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_follow_relationships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -45,10 +45,8 @@ p {
 }
 
 .dropdown {
-  position:  relative;
-  float: left;
-  margin-top: 9px;
-  margin-left: 351px;
+  margin-top: 6px;
+  float: right;
 }
 
 /* miscellaneous */
@@ -148,4 +146,11 @@ aside {
 
 .users.follow {
   padding: 0;
+}
+.book-show{
+  margin-left: 45px;
+}
+
+.img-rounded{
+  margin-left: 50px;
 }

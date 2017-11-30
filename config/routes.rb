@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  get "books/show"
+  get "books/new"
   root "static_pages#home"
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
@@ -14,4 +15,6 @@ Rails.application.routes.draw do
   end
   resources :user_follow_relationships, only: %i(create destroy)
   resources :publishers
+  resources :users
+  resources :books
 end

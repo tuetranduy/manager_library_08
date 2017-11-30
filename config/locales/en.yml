@@ -1,10 +1,60 @@
 en:
+  add_new_book: Add new book
   authors:
     new:
       add_author: Add author
       add_new_author: Add new author
     show:
       all_author: All authors
+  books:
+    create:
+      book_add_success: Book added !
+    form:
+      add_book: Add book
+    index:
+      title: All books
+    new:
+      add_book: Add book
+    show:
+      book_not_found: Book not found !
+  form:
+    account: Account
+    admin: Admin
+    all_user: All user
+    avatar: Avatar
+    conf_pass: Confirmation
+    create_acc: Create my account
+    del_error: Delete Error
+    del_succ: User deleted!
+    delete: Delete
+    edit: Edit
+    edit_save: Save changes
+    edit_title: Edit user
+    follow: Follow
+    follow_error: Follow error
+    followers: Followers
+    following: Following
+    form_error: The form contains
+    link_sign_up: Sign up now!
+    log_in: Log in
+    log_in_error: Invalid email/password
+    log_out: Log out
+    new_user: New user?
+    not_found: Not Found
+    not_user: Don't find user
+    pl_login: Please log in !
+    profile: Profile
+    remember_me: Remember me on this computer
+    search: Search
+    setting: Settings
+    sign_up: Sign up
+    sign_up_succ: Signup Success
+    unfollow: Unfollow
+    update_succ: Profile updated
+    user: Users
+    user_error: User error
+    view_profile: view my profile
+    you_sure: You sure?
   layouts:
     application:
       title: Library Management
@@ -25,6 +75,24 @@ en:
       search_btn: Search
       settings: Settings
       toggle_navigation: Toggle navigation
+  pub:
+    create_error: Error
+    create_sub: Create
+    create_succ: Publishers created
+    delete_succ: Delete success
+    error: Error
+    find_error: Not publisher
+    publisher:
+      publisher: Publisher
+    title: Publishers
+    update_sub: Update
+    update_succ: Update success
+  shared:
+    error_messages:
+      error: error
+      form_contain_error: The form contains
+    error_messages_book:
+      error: error
   static_pages:
     author:
       author: Author
@@ -35,53 +103,3 @@ en:
     home:
       categories: Category
       home: Home
-
-  form:
-    sign_up: Sign up
-    log_in: Log in
-    log_out: Log out
-    create_acc: Create my account
-    conf_pass: Confirmation
-    form_error: The form contains
-    sign_up_succ: Signup Success
-    not_user: Don't find user
-    search: Search
-    new_user: New user?
-    link_sign_up: Sign up now!
-    log_in_error: Invalid email/password
-    profile: Profile
-    setting: Settings
-    account: Account
-    remember_me: Remember me on this computer
-    user: Users
-    edit_title: Edit user
-    edit_save: Save changes
-    update_succ: Profile updated
-    pl_login: Please log in !
-    all_user: All user
-    you_sure: You sure?
-    delete: Delete
-    del_succ: User deleted!
-    del_error: Delete Error
-    edit: Edit
-    admin: Admin
-    user_error: User error
-    following: Following
-    followers: Followers
-    follow: Follow
-    unfollow: Unfollow
-    view_profile: view my profile
-    follow_error: Follow error
-    not_found: Not Found
-    avatar: Avatar
-
-  pub:
-    title: Publishers
-    create_succ: Publishers created
-    create_error: Error
-    create_sub: Create
-    find_error: Not publisher
-    update_succ: Update success
-    update_sub: Update
-    delete_succ: Delete success
-    error: Error

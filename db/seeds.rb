@@ -1,6 +1,24 @@
-8.times do |n|
+10.times do |n|
   name = Faker::Book.unique.genre
   Category.create!(name: name, parent_id: "0")
+end
+
+10.times do |n|
+  name = Faker::Book.unique.publisher
+  Publisher.create!(name: name)
+end
+
+10.times do |n|
+  name = Faker::Book.unique.author
+  Author.create!(name: name)
+end
+
+50.times do |n|
+  name = Faker::Book.title
+  category_id = Faker::Number.between(1, 5)
+  publisher_id = Faker::Number.between(1, 5)
+  author_id = Faker::Number.between(1, 5)
+  Book.create!(name: name, category_id: category_id, publisher_id: publisher_id, author_id: author_id)
 end
 
 User.create!(name:  "Tran Hoang", email: "hoang@gmail.com", password: "123123",

@@ -1,3 +1,22 @@
 en:
-  hello: "Hello world"
-  title: "Manager Library"
+  layouts:
+    application:
+      title: Library Management
+    footer:
+      about: About
+      help: Help
+    header:
+      authors: Authors
+      home: Home
+      lg_library_management: Library management
+      login: Login
+      publishers: Publishers
+      search_btn: Search
+  static_pages:
+    author:
+      author: Author
+    home:
+      categories: Category
+      home: Home
+    publisher:
+      publisher: Publisher

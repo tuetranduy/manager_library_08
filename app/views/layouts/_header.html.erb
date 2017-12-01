@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to t(".home"), root_path %></li>
+        <li><%= link_to t(".authors"), "#" %></li>
+        <li><%= link_to t(".publishers"), "#" %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t(".login"), "#" %></li>
+      </ul>
+
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= t ".search_btn" %></button>
+      </form>
+    </nav>
+
+  </div>
+</header>
+</nav>

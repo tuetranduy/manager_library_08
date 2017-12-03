@@ -28,7 +28,9 @@
           <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
           <%= t ".account" %> <span class="caret"></span></button>
           <ul class="dropdown-menu">
-            <li><%= link_to t("form.user"), users_path %></li>
+            <% if admin? %>
+              <li><%= link_to t("form.user"), users_path %></li>
+            <% end %>
             <li><%= link_to t("form.profile"), current_user %></li>
             <li><%= link_to t("form.setting"), edit_user_path(current_user) %></li>
             <li class="divider"></li>

@@ -68,3 +68,9 @@ en:
     edit: Edit
     admin: Admin
     user_error: User error
+    following: Following
+    followers: Followers
+    follow: Follow
+    unfollow: Unfollow
+    view_profile: view my profile
+    follow_error: Follow error

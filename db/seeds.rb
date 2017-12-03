@@ -1,6 +1,7 @@
 8.times do |n|
-  name = Faker::Book.genre
+  name = Faker::Book.unique.genre
   Category.create!(name: name, parent_id: "0")
+end
 
 User.create!(name:  "Tran Hoang", email: "hoang@gmail.com", password: "123123",
   password_confirmation: "123123")
@@ -12,3 +13,10 @@ User.create!(name:  "Tran Hoang", email: "hoang@gmail.com", password: "123123",
   User.create!(name:  name, email: email, password: password,
     password_confirmation: password)
 end
+
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each {|followed| user.user_follow(followed)}
+followers.each {|follower| follower.user_follow(user)}

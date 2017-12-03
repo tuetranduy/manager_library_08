@@ -40,9 +40,19 @@ en:
 
   form:
     sign_up: Sign up
+    log_in: Log in
+    log_out: Log out
     create_acc: Create my account
     conf_pass: Confirmation
     form_error: The form contains
     sign_up_succ: Signup Success
     not_user: Don't find user
     search: Search
+    new_user: New user?
+    link_sign_up: Sign up now!
+    log_in_error: Invalid email/password
+    profile: Profile
+    setting: Settings
+    account: Account
+    remember_me: Remember me on this computer
+    user: Users

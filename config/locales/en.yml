@@ -56,3 +56,15 @@ en:
     account: Account
     remember_me: Remember me on this computer
     user: Users
+    edit_title: Edit user
+    edit_save: Save changes
+    update_succ: Profile updated
+    pl_login: Please log in !
+    all_user: All user
+    you_sure: You sure?
+    delete: Delete
+    del_succ: User deleted!
+    del_error: Delete Error
+    edit: Edit
+    admin: Admin
+    user_error: User error

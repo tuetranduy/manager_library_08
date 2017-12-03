@@ -7,7 +7,9 @@ end
 
 gem "bootstrap-sass", "3.3.7"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "bcrypt", "3.1.11"
 gem "coffee-rails", "~> 4.2"
+gem "config"
 gem "jbuilder", "~> 2.5"
 gem "rubocop", require: false
 gem "mysql2", ">= 0.3.18", "< 0.5"

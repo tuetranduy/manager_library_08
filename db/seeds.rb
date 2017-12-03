@@ -14,6 +14,11 @@ User.create!(name:  "Tran Hoang", email: "hoang@gmail.com", password: "123123",
     password_confirmation: password)
 end
 
+10.times do |n|
+  name = Faker::Name.name
+  Publisher.create!(name: name)
+end
+
 users = User.all
 user  = users.first
 following = users[2..50]

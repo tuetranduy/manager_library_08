@@ -1,0 +1,12 @@
+<% if @publisher.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger"><%= t "form.form_error" %>
+      <%= pluralize(@publisher.errors.size, "error") %>.
+    </div>
+    <ul>
+      <% @publisher.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

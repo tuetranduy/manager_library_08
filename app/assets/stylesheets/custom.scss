@@ -2,14 +2,45 @@
 @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
 
-body {
-  padding-top: 54px;
-}
+$light-gray: #777;
+$gray-medium-light: #eaeaea;
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
+}
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $light-gray;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .dropdown {
@@ -18,3 +49,28 @@ body {
   margin-top: 9px;
   margin-left: 351px;
 }
+
+.btn-primary{
+  margin-top: 10px;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+

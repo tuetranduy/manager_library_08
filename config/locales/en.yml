@@ -37,3 +37,12 @@ en:
       home: Home
     publisher:
       publisher: Publisher
+
+  form:
+    sign_up: Sign up
+    create_acc: Create my account
+    conf_pass: Confirmation
+    form_error: The form contains
+    sign_up_succ: Signup Success
+    not_user: Don't find user
+    search: Search

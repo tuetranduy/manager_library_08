@@ -1,20 +1,37 @@
 en:
+  authors:
+    new:
+      add_author: Add author
+      add_new_author: Add new author
+    show:
+      all_author: All authors
   layouts:
     application:
       title: Library Management
     footer:
       about: About
+      credit: By Duy Tue & Huy Hoang OE9-DN
       help: Help
     header:
+      account: Account
       authors: Authors
       home: Home
       lg_library_management: Library management
       login: Login
+      logout: Log out
+      my_account: 'My account '
+      profile: Profile
       publishers: Publishers
       search_btn: Search
+      settings: Settings
+      toggle_navigation: Toggle navigation
   static_pages:
     author:
       author: Author
+    book_index:
+      book_name: First Product
+      details: See more snippets like this online store item at
+      like: 15 reviews
     home:
       categories: Category
       home: Home

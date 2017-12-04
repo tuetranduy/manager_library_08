@@ -1,0 +1,19 @@
+<% provide(:title, t(".add_author")) %>
+<h1><%= t ".add_author" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @author do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :birthday %>
+      <%= f.datetime_field :birthday %>
+
+      <%= f.label :details %>
+      <%= f.text_area :details %>
+
+      <%= f.submit t(".add_new_author"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

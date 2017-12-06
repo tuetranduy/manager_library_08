@@ -21,6 +21,8 @@ class User < ApplicationRecord
   has_many :follower_authors, through: :author_active_relationships
   has_many :comments, dependent: :destroy
 
+  scope :order_user, ->{order(name: :asc)}
+
   validates :name,  presence: true, length: {maximum: Settings.user.max_name}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: Settings.user.max_email},

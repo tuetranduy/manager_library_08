@@ -1,0 +1,21 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label :password_confirmation, t("form.conf_pass") %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <% if admin? %>
+    <%= f.label :is_admin, class: "checkbox inline" do %>
+    <%= f.check_box :is_admin %>
+      <span><%= t "form.admin" %></span>
+    <% end %>
+  <% end %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

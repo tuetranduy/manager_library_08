@@ -1,0 +1,7 @@
+<li>
+  <%= link_to user.name, user %>
+  <% if current_user.is_admin? && !current_user?(user) %>
+    | <%= link_to t("form.delete"), user, method: :delete, data: {confirm: t("form.you_sure")} %>
+    | <%= link_to t("form.edit"), edit_user_path(user)  %>
+  <% end %>
+</li>

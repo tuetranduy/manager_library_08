@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129153456) do
+ActiveRecord::Schema.define(version: 20171206035912) do
 
   create_table "author_follow_relationships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "follower_id"
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(version: 20171129153456) do
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
-  create_table "user_follow_relation_ships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "user_follow_relationships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "follower_id"
     t.integer "followed_id"
     t.datetime "created_at", null: false

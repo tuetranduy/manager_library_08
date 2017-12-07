@@ -35,8 +35,6 @@ en:
     home:
       categories: Category
       home: Home
-    publisher:
-      publisher: Publisher
 
   form:
     sign_up: Sign up
@@ -74,3 +72,10 @@ en:
     unfollow: Unfollow
     view_profile: view my profile
     follow_error: Follow error
+
+  pub:
+    title: Publishers
+    create_succ: Publishers created
+    create_error: Error
+    create_sub: Create
+    find_error: Not publisher

@@ -1,0 +1,7 @@
+<li>
+  <%= link_to publisher.name, publisher %>
+  <% if admin? %>
+    | <%= link_to t("form.delete"), publisher, method: :delete, data: {confirm: t("form.you_sure")} %>
+    | <%= link_to t("form.edit"), edit_publisher_path(publisher)  %>
+  <% end %>
+</li>

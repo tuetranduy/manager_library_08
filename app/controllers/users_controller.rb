@@ -53,7 +53,6 @@ class UsersController < ApplicationController
     else
       redirect_to users_url
     end
-
   end
 
   def followers

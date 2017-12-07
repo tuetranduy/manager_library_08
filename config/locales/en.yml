@@ -79,3 +79,7 @@ en:
     create_error: Error
     create_sub: Create
     find_error: Not publisher
+    update_succ: Update success
+    update_sub: Update
+    delete_succ: Delete success
+    error: Error

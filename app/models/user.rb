@@ -7,12 +7,12 @@ class User < ApplicationRecord
   has_many :books, through: :borrows
   has_many :likes, dependent: :destroy
   has_many :rating, dependent: :destroy
-  has_many :user_active_relationships, class_name: UserFollowRelationShip.name,
+  has_many :user_active_relationships, class_name: UserFollowRelationship.name,
    foreign_key: :follower_id, dependent: :destroy
-  has_many :user_passive_relationships, class_name: UserFollowRelationShip.name,
+  has_many :user_passive_relationships, class_name: UserFollowRelationship.name,
    foreign_key: :followed_id, dependent: :destroy
-  has_many :followers, through: :user_active_relationships
-  has_many :following, through: :user_passive_relationships, source: :followed
+  has_many :followers, through: :user_passive_relationships, source: :follower
+  has_many :following, through: :user_active_relationships, source: :followed
   has_many :book_active_relationships, class_name: BookFollowerRelationship.name,
    foreign_key: :follower_id, dependent: :destroy
   has_many :follower_books, through: :book_active_relationships
@@ -54,6 +54,18 @@ class User < ApplicationRecord
 
   def forget
     update_attribute :remember_digest, nil
+  end
+
+  def user_follow other_user
+    following << other_user
+  end
+
+  def user_unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include?other_user
   end
 
   private

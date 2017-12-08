@@ -21,8 +21,6 @@ class User < ApplicationRecord
   has_many :follower_authors, through: :author_active_relationships
   has_many :comments, dependent: :destroy
 
-  scope :order_user, ->{order(name: :asc)}
-
   validates :name,  presence: true, length: {maximum: Settings.user.max_name}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: Settings.user.max_email},
@@ -30,6 +28,13 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: Settings.user.min_pass}
 
   has_secure_password
+
+  scope :order_user, ->{order(name: :asc)}
+  scope :search_by_name, -> search do
+    if search.present?
+      where("name LIKE ? OR is_admin LIKE ?", "%#{search}%", "%#{search}%")
+    end
+  end
 
   class << self
     def digest string

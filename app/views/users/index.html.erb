@@ -4,6 +4,9 @@
 <%= will_paginate %>
 
 <ul class="users">
+  <% if @users.blank? %>
+    <h1> <%= t "form.not_found" %> </h1>
+  <% end %>
   <%= render @users %>
 </ul>
 

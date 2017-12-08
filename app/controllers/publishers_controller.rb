@@ -2,7 +2,7 @@ class PublishersController < ApplicationController
   before_action :correct_publisher, except: %i(index new create)
 
   def index
-    @publishers = Publisher.order_name.paginate(page: params[:page])
+    @publishers = Publisher.order_name.search_by_name(params[:search]).paginate(page: params[:page])
   end
 
   def new

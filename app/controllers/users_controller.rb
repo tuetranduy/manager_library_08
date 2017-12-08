@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :find_user, except: %i(index new create)
 
   def index
-    @users = User.order_user.paginate(page: params[:page])
+    @users = User.order_user.search_by_name(params[:search]).paginate(page: params[:page])
   end
 
   def new

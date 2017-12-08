@@ -28,9 +28,10 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: Settings.user.min_pass}
 
   has_secure_password
+  mount_uploader :avatar_img, AvatarUploader
 
   scope :order_user, ->{order(name: :asc)}
-  scope :search_by_name, -> search do
+  scope :search_by_name, ->(search) do
     if search.present?
       where("name LIKE ? OR is_admin LIKE ?", "%#{search}%", "%#{search}%")
     end

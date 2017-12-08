@@ -3,3 +3,7 @@ user:
   max_email: 255
   min_pass: 6
   remember: "1"
+  avatar_width: 300
+  avatar_heigh: 400
+  avatar: 200
+  avatar_show: 100

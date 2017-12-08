@@ -73,6 +73,7 @@ en:
     view_profile: view my profile
     follow_error: Follow error
     not_found: Not Found
+    avatar: Avatar
 
   pub:
     title: Publishers

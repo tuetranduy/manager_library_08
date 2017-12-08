@@ -3,6 +3,9 @@
 
 <%= will_paginate %>
 <ul class="users">
+  <% if @publishers.blank? %>
+    <h1><%= t "form.not_found" %></h1>
+  <% end %>
   <% if admin? %>
     <li><h4><%= link_to t("pub.create_sub"), new_publisher_url %></h4></li>
   <% end %>

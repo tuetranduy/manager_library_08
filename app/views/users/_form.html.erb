@@ -4,16 +4,24 @@
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
 
+  <%= f.label :email %>
+  <%= f.email_field :email, class: "form-control" %>
+
   <%= f.label :password %>
   <%= f.password_field :password, class: "form-control" %>
 
   <%= f.label :password_confirmation, t("form.conf_pass") %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
 
-  <% if admin? %>
-    <%= f.label :is_admin, class: "checkbox inline" do %>
-    <%= f.check_box :is_admin %>
-      <span><%= t "form.admin" %></span>
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar_img %>
+
+  <% if logged_in? %>
+    <% if admin? %>
+      <%= f.label :is_admin, class: "checkbox inline" do %>
+      <%= f.check_box :is_admin %>
+        <span><%= t "form.admin" %></span>
+      <% end %>
     <% end %>
   <% end %>
 

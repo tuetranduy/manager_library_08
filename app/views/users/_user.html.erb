@@ -1,4 +1,5 @@
 <li>
+  <%= image_tag user.avatar_img.url, class: "img-circle", size: Settings.user.avatar_show %>
   <%= link_to user.name, user %>
   <% if admin? %>
     | <%= link_to t("form.delete"), user, method: :delete, data: {confirm: t("form.you_sure")} %>
